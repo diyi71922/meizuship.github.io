@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 50px auto;
+            position: relative; 
+            z-index: 1;
+        }
+        .profile-image {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .profile-video {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            object-fit: cover;
+            z-index: 0; 
+            position: relative; 
+        }
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .section-content {
+            font-size: 16px;
+            color: #666;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+            position: relative; 
+            z-index: 2; 
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 3; 
+        }
+        .dropdown-content p {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content p:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1; 
+        }
+        @media (max-width: 600px) {
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            .profile-video {
+                width: 100%;
+            }
+            .navbar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="img/001.jpg" alt="个人头像" class="profile-image">
+        
+        <div class="navbar">
+            <div class="dropdown">
+                <a href="#" class="dropbtn">技能</a>
+                <div class="dropdown-content">
+                    <p>HTML/CSS</p>
+                    <p>JavaScript</p>
+                    <p>React</p>
+                    <p>Vue.js</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">教育背景</a>
+                <div class="dropdown-content">
+                    <p><strong>学校：</strong>北京大学</p>
+                    <p><strong>专业：</strong>计算机科学与技术</p>
+                    <p><strong>毕业时间：</strong>2020年</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">工作经验</a>
+                <div class="dropdown-content">
+                    <p><strong>公司：</strong>阿里巴巴</p>
+                    <p><strong>职位：</strong>前端开发工程师</p>
+                    <p><strong>时间：</strong>2020年 - 至今</p>
+                    <p><strong>描述：</strong>负责前端开发工作，参与多个项目的开发，提升用户体验。</p>
+                </div>
+            </div>
+        </div>
+        
+        <video class="profile-video" controls>
+            <source src="video/wave.mp4" type="video/mp4">
+            您的浏览器不支持 video 标签。
+        </video>
+    </div>
+    
+    <div class="footer">
+        <div class="section">
+            <div class="section-title">联系方式</div>
+            <div class="section-content">
+                <p><strong>电话：</strong>123-456-7890</p>
+                <p><strong>邮箱：</strong>youyou@example.com</p>
+                <p><strong>地址：</strong>北京市朝阳区</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
